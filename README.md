@@ -1,5 +1,18 @@
 # Deep Video Deinterlacing
 
+A fork for easy use on video files rather than single images, by streaming ffmpeg > tensorflor > ffmpeg. Use tensorflow-gpu or this will take forever on your cpu.
+
+You need the following to run this:
+- python 3.6
+- numpy
+- scipy
+- tensorflow (gpu version is preferable!!!)
+- ffmpeg-python
+- matplotlib
+
+Below is the original readme:
+
+
 We run this code using Tensorflow.
 
 ### Architecture
