@@ -10,6 +10,12 @@ You need the following to run this:
 - ffmpeg-python
 - matplotlib
 
+To run, open a command line in the folder containing the scripts and type:
+
+`python deinterlace.py [INPUT_VIDEO] [OUTPUT_VIDEO]`
+eg.
+`python deinterlace.py "test.ts" "output.mp4"`
+
 Below is the original readme:
 
 
