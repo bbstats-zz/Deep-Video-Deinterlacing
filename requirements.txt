@@ -1,0 +1,6 @@
+numpy
+tensorflow
+imageio
+scipy
+ffmpeg-python
+matplotlib

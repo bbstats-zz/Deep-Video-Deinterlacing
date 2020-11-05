@@ -2,11 +2,15 @@ import numpy as np
 import tensorflow as tf
 import time
 import os
-from scipy.misc import imsave, imread, imresize
+#from scipy.misc import imresize
+from imageio import imwrite, imread
 import scipy.interpolate
 from scipy.ndimage.interpolation import shift
 import scipy.ndimage
 import matplotlib.pyplot as plt
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior() 
+
 
 def parabolic(f, x):
 	"""Helper function to refine a peak position in an array"""
@@ -300,6 +304,6 @@ class TSNet():
 			print("processing",img_path)
 			frame_0, frame_1 = self.deinterlace_frame( imread(img_path, mode='RGB') )
 			input_filename, input_ext = os.path.splitext(os.path.basename(img_path))
-			imsave("results/"+input_filename+"_0" + input_ext, frame_0)
-			imsave("results/"+input_filename+"_1" + input_ext, frame_1)
+			imwrite("results/"+input_filename+"_0" + input_ext, frame_0)
+			imwrite("results/"+input_filename+"_1" + input_ext, frame_1)
 		self.finish()
