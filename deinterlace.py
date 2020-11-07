@@ -116,7 +116,7 @@ def run(in_filename, out_filename):
         # out_frame1, out_frame2 = model.bob_frame(in_frame)
         
         #bottom field first
-        if field_order == "bb":
+        if field_order != "bb":
             write_frame(process2, out_frame2)
             write_frame(process2, out_frame1)
         #default, top field first
